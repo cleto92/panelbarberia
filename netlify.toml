@@ -1,0 +1,17 @@
+
+
+[build]
+  # Directorio de publicación
+  # Asegúrate de que esto coincida con el directorio que tu herramienta de construcción genera (por ejemplo, build o dist)
+  publish = "build"
+  # Comando de construcción
+  # Esto debe coincidir con el comando que usas para construir tu sitio (puedes omitirlo si construyes tu sitio localmente y solo necesitas desplegar el directorio de salida)
+  command = "npm run build"
+
+[[redirects]]
+  # Redirige todas las rutas a index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  # Permite que todas las rutas sean tratadas como SPA
+  force = true
